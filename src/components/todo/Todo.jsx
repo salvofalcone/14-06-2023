@@ -1,18 +1,22 @@
 import "./index.css";
+import { useState } from "react";
 
 const Todo = ({ data }) => {
-  const whatClass = (plh) => {
-    if (plh) {
-      return "done";
-    }
+
+  /* useState */
+  const [isDone, setDone] = useState(data.completed);
+
+  const handleToggle = () => {
+    setDone(!isDone);
   };
 
   return (
     <>
-      <li 
-      key={data.id}
-      className={` todo__li ${whatClass(data.completed)}`}
-      id={data.id}>
+      <li
+        key={data.id}
+        className={` todo__li ${isDone ? "done" : ""}`}
+        id={data.id}
+        onClick={handleToggle}>
         {data.todo}
       </li>
     </>
@@ -20,5 +24,3 @@ const Todo = ({ data }) => {
 };
 
 export default Todo;
-
-
