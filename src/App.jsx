@@ -6,13 +6,11 @@ import { todoList } from "./mocks/todos";
 
 function App() {
   return (
-    <>
-      <div className="App">
-        {/* <Button /> */}
-        <Title />
-        <TodoList todoList={todoList} />
-      </div>
-    </>
+    <div className="App">
+      {/* <Button /> */}
+      <Title />
+      <TodoList todoList={todoList} />
+    </div>
   );
 }
 
