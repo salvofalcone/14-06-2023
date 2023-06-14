@@ -1,6 +1,6 @@
 import "./App.css";
 import Title from "./components/title";
-import Button from "./components/button";
+// import Button from "./components/button";
 import TodoList from "./components/todoList/TodoList";
 import { todoList } from "./mocks/todos";
 
